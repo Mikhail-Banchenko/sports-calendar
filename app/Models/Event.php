@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     public function sport() {
-        return $this->belongsTo(Sport::class);
+        return $this->belongsTo(Sport::class, 'sport_id');
     }
 
     public function leftTeam() {
