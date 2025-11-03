@@ -1,24 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sports Calendar</title>
-</head>
-<body>
-    <h1>Sports Events</h1>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Sports Events') }}
+        </h2>
+    </x-slot>
 
-    @if($events->isEmpty())
-        <p>No events found.</p>
-    @else
-        <ul>
-            @foreach($events as $event)
-                <li>
-                    {{ $event->date }} {{ $event->time }}: 
-                    {{ $event->sport->name }} — 
-                    {{ $event->leftTeam->name }} vs {{ $event->rightTeam->name }}
-                </li>
-            @endforeach
-        </ul>
-    @endif
-</body>
-</html>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900 dark:text-gray-100">
+                @if($events->isEmpty())
+                    <p>No events found.</p>
+                @else
+                    <ul class="space-y-2">
+                        @foreach($events as $event)
+                            <li>
+                                <strong>{{ $event->date }} {{ $event->time }}</strong> — 
+                                {{ $event->sport->name }}: 
+                                {{ $event->leftTeam->name }} vs {{ $event->rightTeam->name }}
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+            </div>
+        </div>
+    </div>
+</x-app-layout>
