@@ -58,11 +58,11 @@
                     <!-- If user is not authorized -->
                     <div class="flex space-x-4">
                         <a href="{{ route('login') }}" 
-                        class="text-sm text-gray-600 dark:text-gray-300">
+                        class="text-sm text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white transition ease-in-out duration-300">
                         {{ __('Log in') }}
                         </a>
                         <a href="{{ route('register') }}" 
-                        class="ms-4 text-sm text-gray-600 dark:text-gray-300">
+                        class="ms-4 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-white transition ease-in-out duration-300">
                         {{ __('Register') }}
                         </a>
                     </div>
@@ -78,58 +78,6 @@
                     </svg>
                 </button>
             </div>
-        </div>
-    </div>
-
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('events.index')" :active="request()->routeIs('events.index')">
-                {{ __('Events') }}
-            </x-responsive-nav-link>
-        </div>
-
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
-            @auth
-                <!-- If user is authorized -->
-                <div class="px-4">
-                    <div class="font-medium text-base text-gray-800 dark:text-gray-200">
-                        {{ Auth::user()->name }}
-                    </div>
-                    <div class="font-medium text-sm text-gray-500">
-                        {{ Auth::user()->email }}
-                    </div>
-                </div>
-
-                <div class="mt-3 space-y-1">
-                    <x-responsive-nav-link :href="route('profile.edit')">
-                        {{ __('Profile') }}
-                    </x-responsive-nav-link>
-
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <x-responsive-nav-link :href="route('logout')"
-                                onclick="event.preventDefault();
-                                            this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                        </x-responsive-nav-link>
-                    </form>
-                </div>
-            @endauth
-
-            @guest
-                <!-- If user is not authorized -->
-                <div class="px-4">
-                    <x-responsive-nav-link :href="route('login')">
-                        {{ __('Log in') }}
-                    </x-responsive-nav-link>
-                    <x-responsive-nav-link :href="route('register')">
-                        {{ __('Register') }}
-                    </x-responsive-nav-link>
-                </div>
-            @endguest
         </div>
     </div>
 </nav>

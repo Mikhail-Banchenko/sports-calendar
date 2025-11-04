@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             SportsSeeder::class,
             CommandsSeeder::class,
             EventsSeeder::class,
+            UsersSeeder::class,
         ]);
     }
 }
