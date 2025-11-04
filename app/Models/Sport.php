@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sport extends Model
 {
     public function commands() {
-        return $this->hasMany(Command::class);
+        return $this->hasMany(Team::class);
     }
 
     public function events() {

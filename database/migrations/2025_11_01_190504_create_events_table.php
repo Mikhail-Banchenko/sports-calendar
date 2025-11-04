@@ -15,16 +15,17 @@ return new class extends Migration
             $table->id();
             $table->date('date');
             $table->time('time');
-            $table->foreignId('sport_id')
+            $table->foreignId('_sport_id')
                   ->constrained('sports')
                   ->cascadeOnDelete();
-            $table->foreignId('team_left_id')
-                  ->constrained('commands')
+            $table->foreignId('_team_left_id')
+                  ->constrained('teams')
                   ->cascadeOnDelete();
-            $table->foreignId('team_right_id')
-                  ->constrained('commands')
+            $table->foreignId('_team_right_id')
+                  ->constrained('teams')
                   ->cascadeOnDelete();
             $table->text('description')->nullable();
+            $table->string('venue')->nullable();
             $table->timestamps();
         });
     }

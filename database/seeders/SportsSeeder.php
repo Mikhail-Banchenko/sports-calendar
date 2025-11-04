@@ -14,7 +14,6 @@ class SportsSeeder extends Seeder
     public function run(): void
     {
         //adding 2 types of sport to database
-        Sport::create(['name' => 'Football']);
-        Sport::create(['name' => 'Basketball']);
+        Sport::insert([['name' => 'Football'], ['name' => 'Basketball']]);
     }
 }

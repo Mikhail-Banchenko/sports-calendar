@@ -17,6 +17,8 @@
                                 <strong>{{ $event->date }} {{ $event->time }}</strong> — 
                                 {{ $event->sport->name }}: 
                                 {{ $event->leftTeam->name }} vs {{ $event->rightTeam->name }}
+                                | Venue: {{ $event->venue ?? 'TBD' }}
+                                | Description: {{ $event->description ?? 'N/A' }}
                             </li>
                         @endforeach
                     </ul>
