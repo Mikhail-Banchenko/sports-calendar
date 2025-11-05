@@ -12,8 +12,23 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        {{ __('Home') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index')">
                         {{ __('Events') }}
+                    </x-nav-link>
+                    <x-nav-link href="#" :active="false">
+                        {{ __('Teams') }}
+                    </x-nav-link>
+                    <x-nav-link href="#" :active="false">
+                        {{ __('Players') }}
+                    </x-nav-link>
+                    <x-nav-link href="#" :active="false">
+                        {{ __('Standings') }}
+                    </x-nav-link>
+                    <x-nav-link href="#" :active="false">
+                        {{ __('Contact') }}
                     </x-nav-link>
                 </div>
             </div>
