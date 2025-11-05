@@ -12,7 +12,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //pages related to events. 1 - list of events, 2 - event details
 Route::get('/events', [EventController::class, 'index'])->name('events.index');
-// Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events.show');
 
 //default routes added by Laravel Breeze
 Route::middleware('auth')->group(function () {

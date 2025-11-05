@@ -10,12 +10,12 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links -->
+                <!-- Navigation Links. Only 2 are active: home and events, other are just placeholders -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index')">
+                    <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index') or request()->routeIs('events.show')">
                         {{ __('Events') }}
                     </x-nav-link>
                     <x-nav-link href="#" :active="false">

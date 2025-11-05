@@ -20,4 +20,14 @@ class EventController extends Controller
         //pass events data to the Blade template
         return view('events.index', compact('events'));
     }
+
+    //display details of a specific event
+    public function show($id)
+    {
+        //search for the event by its ID otherwise return 404 error
+        $event = Event::findOrFail($id);
+
+        //pass event data to the Blade template
+        return view('events.show', compact('event'));
+    }
 }
