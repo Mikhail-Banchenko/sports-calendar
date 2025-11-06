@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Admin\AdminEventController;
 use App\Http\Middleware\IsAdmin;
 
 //main page of the application

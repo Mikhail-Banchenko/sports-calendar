@@ -6,6 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+    protected $fillable = [
+        'date',
+        'time',
+        '_sport_id',
+        '_team_left_id',
+        '_team_right_id',
+        'venue',
+        'description',
+    ];
+
     public function sport() {
         return $this->belongsTo(Sport::class, '_sport_id');
     }

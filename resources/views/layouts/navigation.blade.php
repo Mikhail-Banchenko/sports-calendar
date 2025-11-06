@@ -15,7 +15,7 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index') or request()->routeIs('events.show')">
+                    <x-nav-link :href="route('events.index')" :active="request()->routeIs(['events.index', 'events.show'])">
                         {{ __('Events') }}
                     </x-nav-link>
                     <x-nav-link href="#" :active="false">
@@ -30,6 +30,11 @@
                     <x-nav-link href="#" :active="false">
                         {{ __('Contact') }}
                     </x-nav-link>
+                    @if(Auth::check() && Auth::user()->is_admin)
+                        <x-nav-link :href="route('admin.events.index')" :active="request()->routeIs(['admin.events.index', 'admin.events.edit', 'admin.events.create'])">
+                            {{ __('Admin Panel') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 

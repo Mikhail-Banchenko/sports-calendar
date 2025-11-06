@@ -1,10 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Sport Calendar') }}
-        </h2>
-    </x-slot>
-
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-8">
             
@@ -50,7 +44,7 @@
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Управляй событиями, командами и пользователями.
                     </p>
-                    <a href="{{ route('admin.dashboard') }}" class="text-blue-600 hover:underline">Перейти в админку →</a>
+                    <a href="{{ route('admin.events.index') }}" class="text-blue-600 hover:underline">Перейти в админку →</a>
                 </div>
                 @endif
 
