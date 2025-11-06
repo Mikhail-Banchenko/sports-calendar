@@ -29,9 +29,9 @@
                             <th class="px-6 py-3">ID</th>
                             <th class="px-6 py-3">Date</th>
                             <th class="px-6 py-3">Time</th>
-                            <th class="px-6 py-3">Sport ID</th>
-                            <th class="px-6 py-3">Team Left ID</th>
-                            <th class="px-6 py-3">Team Right ID</th>
+                            <th class="px-6 py-3">Sport</th>
+                            <th class="px-6 py-3">Left Team</th>
+                            <th class="px-6 py-3">Right Team</th>
                             <th class="px-6 py-3">Venue</th>
                             <th class="px-6 py-3">Actions</th>
                         </tr>
@@ -42,9 +42,9 @@
                                 <td class="px-6 py-4">{{ $event->id }}</td>
                                 <td class="px-6 py-4">{{ $event->date }}</td>
                                 <td class="px-6 py-4">{{ $event->time }}</td>
-                                <td class="px-6 py-4">{{ $event->_sport_id }}</td>
-                                <td class="px-6 py-4">{{ $event->_team_left_id }}</td>
-                                <td class="px-6 py-4">{{ $event->_team_right_id }}</td>
+                                <td class="px-6 py-4">{{ $sports[$event->_sport_id - 1]->name }}</td>
+                                <td class="px-6 py-4">{{ $teams[$event->_team_left_id - 1]->name }}</td>
+                                <td class="px-6 py-4">{{ $teams[$event->_team_right_id - 1]->name }}</td>
                                 <td class="px-6 py-4">{{ $event->venue }}</td>
                                 <td class="px-6 py-4 flex space-x-2">
                                     <a href="{{ route('admin.events.edit', $event->id) }}"

@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Team;
+use App\Models\Sport;
 
 class AdminEventController extends Controller
 {
@@ -14,7 +16,9 @@ class AdminEventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('admin.events.index', compact('events'));
+        $teams = Team::all();
+        $sports = Sport::all();
+        return view('admin.events.index', compact('events', 'teams', 'sports'));
     }
 
     /**
@@ -22,7 +26,9 @@ class AdminEventController extends Controller
      */
     public function create()
     {
-        return view('admin.events.create');
+        $teams = Team::all();
+        $sports = Sport::all();
+        return view('admin.events.create', compact('teams', 'sports'));
     }
 
     /**
@@ -50,7 +56,9 @@ class AdminEventController extends Controller
     public function edit(string $id)
     {
         $event = Event::findOrFail($id);
-        return view('admin.events.edit', compact('event'));
+        $teams = Team::all();
+        $sports = Sport::all();
+        return view('admin.events.edit', compact('event', 'teams', 'sports'));
     }
 
     /**
@@ -78,6 +86,6 @@ class AdminEventController extends Controller
     public function destroy(string $id)
     {
         Event::destroy($id);
-        redirect()->route('admin.events.index')->with('success', 'Event deleted successfully.');
+        return redirect()->route('admin.events.index')->with('success', 'Event deleted successfully.');
     }
 }
