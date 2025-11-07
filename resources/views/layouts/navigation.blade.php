@@ -10,7 +10,7 @@
                     </a>
                 </div>
 
-                <!-- Navigation Links. Only 2 are active: home and events, other are just placeholders -->
+                <!-- Navigation Links. Only 3 are active: home, events and admin panel (only for admin) other are just placeholders -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Home') }}
@@ -31,7 +31,7 @@
                         {{ __('Contact') }}
                     </x-nav-link>
                     @if(Auth::check() && Auth::user()->is_admin)
-                        <x-nav-link :href="route('admin.events.index')" :active="request()->routeIs(['admin.events.index', 'admin.events.edit', 'admin.events.create'])">
+                        <x-nav-link :href="route('admin.home')" :active="request()->is('admin') || request()->is('admin/*')">
                             {{ __('Admin Panel') }}
                         </x-nav-link>
                     @endif

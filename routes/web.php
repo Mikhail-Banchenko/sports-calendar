@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\AdminEventController;
 use App\Http\Middleware\IsAdmin;
 
@@ -27,6 +28,7 @@ Route::middleware(['auth', IsAdmin::class])->group(function () {
     Route::prefix('admin')->group(function () {
         //recource includes all CRUD routes for managing events in the admin panel
         Route::resource('events', AdminEventController::class)->names('admin.events');
+        Route::get('/', [AdminController::class, 'index'])->name('admin.home');
     });
 });
 
