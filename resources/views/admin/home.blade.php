@@ -1,3 +1,4 @@
+<!-- Main page of admin panel. There are links and a little bit info -->
 <x-app-layout>
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -12,48 +13,42 @@
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                        <!-- Events -->
+                        <!-- Events link -->
                         <a href="{{ route('admin.events.index') }}" 
                            class="block bg-indigo-600 hover:bg-indigo-700 text-white text-center font-semibold py-6 rounded-lg shadow transition">
                             Manage Events
                         </a>
 
-                        <!-- Teams -->
+                        <!-- Teams link -->
                         <a href="#" 
                            class="block bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-6 rounded-lg shadow transition">
                             Manage Teams
                         </a>
 
-                        <!-- Players -->
+                        <!-- Players link -->
                         <a href="#" 
                            class="block bg-green-600 hover:bg-green-700 text-white text-center font-semibold py-6 rounded-lg shadow transition">
                             Manage Players
                         </a>
 
-                        <!-- Sports -->
+                        <!-- Sports link -->
                         <a href="#" 
                            class="block bg-yellow-500 hover:bg-yellow-600 text-white text-center font-semibold py-6 rounded-lg shadow transition">
                             Manage Sports
                         </a>
 
-                        <!-- Users -->
+                        <!-- Users link -->
                         <a href="#" 
                            class="block bg-purple-600 hover:bg-purple-700 text-white text-center font-semibold py-6 rounded-lg shadow transition">
                             Manage Users
                         </a>
 
-                        <!-- Settings -->
+                        <!-- Settings link -->
                         <a href="#" 
                            class="block bg-gray-700 hover:bg-gray-800 text-white text-center font-semibold py-6 rounded-lg shadow transition">
                             Settings
                         </a>
-
                     </div>
-
-                    <div class="mt-10 text-center text-sm text-gray-500 dark:text-gray-400">
-                        Admin Panel © {{ date('Y') }} — Sports Calendar Project
-                    </div>
-
                 </div>
             </div>
         </div>

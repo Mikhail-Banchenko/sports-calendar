@@ -1,13 +1,15 @@
+<!-- Main page of events admin panel. It shows a table with events and gives some links (add|edit|delete event) -->
 <x-app-layout>
     <div class="py-8">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            {{-- Success message --}}
+            <!-- If there is success message - show it -->
             @if (session('success'))
                 <div class="mb-4 p-4 bg-green-100 text-green-800 rounded-lg">
                     {{ session('success') }}
                 </div>
             @endif
 
+            <!-- Button to add a new event -->
             <div class="flex justify-between mb-4">
                 <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Event List</h3>
                 <a href="{{ route('admin.events.create') }}"
@@ -16,6 +18,7 @@
                 </a>
             </div>
 
+            <!-- Table with all events -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <table class="min-w-full text-sm text-left text-gray-700 dark:text-gray-300">
                     <thead class="bg-gray-100 dark:bg-gray-700 uppercase text-xs">
@@ -56,6 +59,7 @@
                                     </form>
                                 </td>
                             </tr>
+                        <!-- If there are no events -->
                         @empty
                             <tr>
                                 <td colspan="8" class="text-center py-4 text-gray-500">

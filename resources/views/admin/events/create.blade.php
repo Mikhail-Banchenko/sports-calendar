@@ -1,3 +1,4 @@
+<!-- New event add page -->
 <x-app-layout>
     <div class="py-6">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
@@ -6,7 +7,7 @@
             </div>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    
+                    <!-- If there are some errors show it -->
                     {{-- Validation Errors --}}
                     @if ($errors->any())
                         <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
@@ -18,11 +19,11 @@
                         </div>
                     @endif
 
-                    {{-- Add Form --}}
+                    <!-- Add form -->
                     <form method="POST" action="{{ route('admin.events.store') }}">
                         @csrf
 
-                        {{-- Date --}}
+                        <!-- Date input -->
                         <div class="mb-4">
                             <label for="date" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Date') }}
@@ -32,7 +33,7 @@
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
-                        {{-- Time --}}
+                        <!-- Time input -->
                         <div class="mb-4">
                             <label for="time" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Time') }}
@@ -42,7 +43,7 @@
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
-                        {{-- Sport ID --}}
+                        <!-- Sport select (gives choice of all sports from DB) -->
                         <div class="mb-4">
                             <label for="_sport_id" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Sport') }}
@@ -59,7 +60,7 @@
                             </select>
                         </div>
 
-                        {{-- Team Left --}}
+                        <!-- Team select (gives choice of all teams from DB) -->
                         <div class="mb-4">
                             <label for="_team_left_id" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Left Team') }}
@@ -75,8 +76,7 @@
                                 @endforeach
                             </select>
                         </div>
-
-                        {{-- Team Right --}}
+                        <!-- Second team select (gives choice of all teams from DB) -->
                         <div class="mb-4">
                             <label for="_team_right_id" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Right Team') }}
@@ -94,7 +94,7 @@
                         </div>
 
 
-                        {{-- Venue --}}
+                        <!-- Venue input -->
                         <div class="mb-4">
                             <label for="venue" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Venue') }}
@@ -104,7 +104,7 @@
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
-                        {{-- Description --}}
+                        <!-- Description textarea -->
                         <div class="mb-4">
                             <label for="description" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
                                 {{ __('Description') }}
@@ -115,7 +115,7 @@
                                 rows="4">{{ old('description') }}</textarea>
                         </div>
 
-                        {{-- Buttons --}}
+                        <!-- Buttons to cancel or submit creating -->
                         <div class="flex items-center justify-end space-x-4 mt-6">
                             <a href="{{ route('admin.events.index') }}"
                                class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded">
@@ -126,9 +126,7 @@
                                 {{ __('Add Event') }}
                             </button>
                         </div>
-
                     </form>
-
                 </div>
             </div>
         </div>
