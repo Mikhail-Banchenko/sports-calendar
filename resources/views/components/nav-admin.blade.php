@@ -4,7 +4,7 @@
             <x-nav-link :href="route('admin.home')" :active="request()->routeIs('admin.home')" class="pb-1">
                 {{ __('Admin Home') }}
             </x-nav-link>
-            <x-nav-link :href="route('admin.events.index')" :active="request()->routeIs('admin.events.index')">
+            <x-nav-link :href="route('admin.events.index')" :active="request()->is('admin/events') || request()->is('admin/events/*')" class="pb-1">
                 {{ __('Manage Events') }}
             </x-nav-link>
             <x-nav-link href="#" :active="false">
