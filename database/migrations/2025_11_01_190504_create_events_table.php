@@ -25,6 +25,8 @@ return new class extends Migration
                   ->constrained('teams')
                   ->cascadeOnDelete();
             $table->text('description')->nullable();
+            $table->string('country')->nullable();
+            $table->string('city')->nullable();
             $table->string('venue')->nullable();
             $table->timestamps();
         });
