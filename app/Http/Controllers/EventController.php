@@ -78,6 +78,8 @@ class EventController extends Controller
     {
         //search for the event by its ID otherwise return 404 error
         $event = Event::findOrFail($id);
+        //load related sport and teams with their players
+        $event->load(['sport', 'leftTeam.players', 'rightTeam.players']);
 
         //pass event data to the Blade template
         return view('events.show', compact('event'));
