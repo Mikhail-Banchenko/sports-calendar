@@ -3,7 +3,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-            <!-- Фильтры (пока просто placeholder) -->
+            <!-- Filters -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6 p-6 text-gray-900 dark:text-gray-100">
                 <h2 class="text-lg font-semibold mb-4">Filter Events</h2>
 
@@ -48,20 +48,6 @@
                         </select>
                     </div>
 
-                    <!-- Date range -->
-                    <div class="col-span-1 md:col-span-3 lg:col-span-2 flex gap-2">
-                        <div class="flex-1">
-                            <label class="block text-sm font-medium mb-1">From</label>
-                            <input type="date" name="start_date" value="{{ $request->start_date ?? now()->toDateString() }}" 
-                                   class="w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600">
-                        </div>
-                        <div class="flex-1">
-                            <label class="block text-sm font-medium mb-1">To</label>
-                            <input type="date" name="end_date" value="{{ $request->end_date }}" 
-                                   class="w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600">
-                        </div>
-                    </div>
-
                     <!-- Country -->
                     <div>
                         <label class="block text-sm font-medium mb-1">Country</label>
@@ -78,24 +64,40 @@
                                placeholder="City">
                     </div>
 
+                    <!-- Date range -->
+                    <div class="col-span-1 md:col-span-3 lg:col-span-2 flex gap-2">
+                        <div class="flex-1">
+                            <label class="block text-sm font-medium mb-1">From</label>
+                            <input type="date" name="start_date" value="{{ $request->start_date ?? now()->toDateString() }}" 
+                                   class="w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        <div class="flex-1">
+                            <label class="block text-sm font-medium mb-1">To</label>
+                            <input type="date" name="end_date" value="{{ $request->end_date }}" 
+                                   class="w-full rounded-md border-gray-300 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                    </div>
+
                     <!-- Submit button -->
-                    <div class="md:col-span-3 lg:col-span-4 flex justify-end items-end">
+                    <div class="md:col-span-3 lg:col-span-1 flex items-end justify-end">
                         <button type="submit" 
                                 class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
                             Apply Filters
                         </button>
                         <a href="{{ route('events.index') }}" 
-                           class="ml-3 px-4 py-2 bg-gray-400 text-white rounded-md hover:bg-gray-500 transition">
+                           class="ml-3 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
                             Reset
                         </a>
                     </div>
                 </form>
             </div>
 
-            <!-- Секция со списком ивентов -->
+            <!-- Events -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 text-gray-900 dark:text-gray-100">
+                <!-- If there are no events found: -->
                 @if($events->isEmpty())
                     <p class="text-center text-gray-600 dark:text-gray-300">No events found.</p>
+                <!-- Else show all events -->
                 @else
                     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         @foreach($events as $event)
