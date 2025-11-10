@@ -28,8 +28,8 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
                     <!-- Left Team -->
                     <a href="#" 
-                        class="block border border-gray-200 dark:border-gray-700 rounded-xl p-5 bg-gray-300 dark:bg-gray-800
-                               hover:bg-gray-500 dark:hover:bg-[#273041] transition duration-200 ease-in-out">
+                        class="block border border-gray-200 rounded-xl p-5 bg-gray-50 hover:bg-gray-100 transition
+                               dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-[#273041]">
                         <h3 class="text-xl font-semibold mb-3">{{ $event->leftTeam->name }}</h3>
                         
                         @if(isset($event->leftTeam->players) && $event->leftTeam->players->count())
@@ -45,8 +45,8 @@
 
                     <!-- Right Team -->
                     <a href="#" 
-                        class="block border border-gray-200 dark:border-gray-700 rounded-xl p-5 bg-gray-300 dark:bg-gray-800
-                               hover:bg-gray-500 dark:hover:bg-[#273041] transition duration-200 ease-in-out">
+                        class="block border border-gray-200 rounded-xl p-5 bg-gray-50 hover:bg-gray-100 transition
+                               dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-[#273041]">
                         <h3 class="text-xl font-semibold mb-3">{{ $event->rightTeam->name }}</h3>
                         
                         @if(isset($event->rightTeam->players) && $event->rightTeam->players->count())
@@ -64,7 +64,8 @@
                 <!-- Back Button -->
                 <div class="mt-8">
                     <a href="{{ route('events.index') }}" 
-                       class="inline-block px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition">
+                       class="inline-block px-4 py-2 bg-gray-400 text-white rounded-md hover:bg-gray-500 transition
+                              dark:bg-gray-600 dark:hover:bg-gray-700">
                         ← Back to Events
                     </a>
                 </div>

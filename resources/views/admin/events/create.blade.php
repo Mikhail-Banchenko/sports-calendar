@@ -3,7 +3,7 @@
     <div class="py-6">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-center mb-6">
-                <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-300">Add Event</h2>
+                <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-300">Add Event</h2>
             </div>
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
@@ -29,7 +29,7 @@
                                 {{ __('Date') }}
                             </label>
                             <input id="date" name="date" type="date" value="{{ old('date') }}"
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
@@ -39,7 +39,7 @@
                                 {{ __('Time') }}
                             </label>
                             <input id="time" name="time" type="time" value="{{ old('time') }}"
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
@@ -99,7 +99,7 @@
                                 {{ __('Country') }}
                             </label>
                             <input id="country" name="country" type="text" value="{{ old('country') }}" placeholder="Write country here..."
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
@@ -109,7 +109,7 @@
                                 {{ __('City') }}
                             </label>
                             <input id="city" name="city" type="text" value="{{ old('city') }}" placeholder="Write city here..."
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
@@ -119,7 +119,7 @@
                                 {{ __('Venue') }}
                             </label>
                             <input id="venue" name="venue" type="text" value="{{ old('venue') }}" placeholder="Write venue here..."
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                         </div>
 
@@ -129,7 +129,7 @@
                                 {{ __('Description') }}
                             </label>
                             <textarea id="description" name="description" placeholder="Write event description here..."
-                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-100 dark:bg-gray-700
                                        focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                                 rows="4">{{ old('description') }}</textarea>
                         </div>
@@ -137,11 +137,13 @@
                         <!-- Buttons to cancel or submit creating -->
                         <div class="flex items-center justify-end space-x-4 mt-6">
                             <a href="{{ route('admin.events.index') }}"
-                               class="bg-red-700 hover:bg-red-800 text-gray-100 font-bold py-2 px-4 rounded transition">
+                               class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition
+                                      dark:bg-red-700 dark:hover:bg-red-800">
                                 {{ __('Cancel') }}
                             </a>
                             <button type="submit"
-                                class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition">
+                                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition
+                                       dark:bg-blue-700 dark:hover:bg-blue-800">
                                 {{ __('Add Event') }}
                             </button>
                         </div>

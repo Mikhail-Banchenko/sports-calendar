@@ -20,7 +20,7 @@
 
                 <!-- Manage Events -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Manage Events</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Manage Events</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Create, edit, and delete events in the sports calendar.
                     </p>
@@ -29,7 +29,7 @@
 
                 <!-- Manage Teams -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Manage Teams</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Manage Teams</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Update team information, rosters, and stats.
                     </p>
@@ -38,7 +38,7 @@
 
                 <!-- Manage Players -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Manage Players</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Manage Players</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Add and edit player profiles and performance data.
                     </p>
@@ -47,7 +47,7 @@
 
                 <!-- Manage Sports -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Manage Sports</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Manage Sports</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Manage sports categories and associated events.
                     </p>
@@ -56,7 +56,7 @@
 
                 <!-- Manage Users -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Manage Users</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Manage Users</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Control user accounts, roles, and permissions.
                     </p>
@@ -65,7 +65,7 @@
 
                 <!-- Settings -->
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6 flex flex-col">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Settings</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Settings</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Configure global site settings and preferences.
                     </p>

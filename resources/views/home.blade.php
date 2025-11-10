@@ -19,7 +19,7 @@
             <!-- Info block with links-->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Upcoming Events</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Upcoming Events</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Check out the schedule of upcoming matches and tournaments.
                     </p>
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Teams & Players</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Teams & Players</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         Explore team lineups, key players, and detailed statistics.
                     </p>
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-gray-600 dark:text-gray-300">Standings</h3>
+                    <h3 class="text-xl font-semibold mb-3 dark:text-gray-300">Standings</h3>
                     <p class="text-gray-700 dark:text-gray-300 mb-4">
                         See the latest league tables, team rankings, and points.
                     </p>

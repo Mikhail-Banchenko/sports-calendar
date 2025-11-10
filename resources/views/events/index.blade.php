@@ -4,7 +4,8 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
             <!-- Filters -->
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mb-6 p-6 text-gray-900 dark:text-gray-100">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mb-6 p-6 text-gray-900 
+                        dark:bg-gray-800 dark:text-gray-100">
                 <h2 class="text-lg font-semibold mb-4">Filter Events</h2>
 
                 <form method="GET" action="{{ route('events.index') }}" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -81,11 +82,13 @@
                     <!-- Submit button -->
                     <div class="md:col-span-3 lg:col-span-1 flex items-end justify-end">
                         <a href="{{ route('events.index') }}" 
-                           class=" px-4 py-2 bg-red-700 text-white rounded-md hover:bg-red-800 transition">
+                           class="px-4 py-2 bg-red-600 text-white font-bold rounded-md hover:bg-red-700 transition
+                                  dark:bg-red-700 dark:hover:bg-red-800">
                             Reset
                         </a>
                         <button type="submit" 
-                                class="ml-3 px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition">
+                                class="ml-3 px-4 py-2 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition
+                                       dark:bg-blue-700 dark:hover:bg-blue-800 ">
                             Apply Filters
                         </button>
                     </div>
@@ -102,8 +105,8 @@
                     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                         @foreach($events as $event)
                             <a href="{{ route('events.show', $event->id) }}" 
-                               class="block border border-gray-200 dark:border-gray-700 rounded-xl p-5 bg-[#273041]
-                                      hover:bg-gray-100 dark:hover:bg-[#2c3749] transition duration-200 ease-in-out">
+                            class="block border border-gray-200 dark:border-gray-700 rounded-xl p-5 bg-gray-50 hover:bg-gray-100 transition
+                                    dark:bg-[#273041] dark:hover:bg-[#2c3749]">
 
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-sm text-gray-500 dark:text-gray-400">
@@ -114,13 +117,13 @@
                                     </span>
                                 </div>
 
-                                <h3 class="text-lg font-bold mb-2">
+                                <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-gray-100">
                                     {{ $event->leftTeam->name }} 
-                                    <span class="text-gray-500">vs</span> 
+                                    <span class="text-gray-500 dark:text-gray-400">vs</span> 
                                     {{ $event->rightTeam->name }}
                                 </h3>
 
-                                <p class="text-sm text-gray-600 dark:text-gray-300 mb-1">
+                                <p class="text-sm text-gray-700 dark:text-gray-300 mb-1">
                                     <span class="font-semibold">Venue:</span> {{ $event->venue ?? 'TBD' }}
                                 </p>
 
@@ -134,6 +137,7 @@
                     </div>
                 @endif
             </div>
+
 
         </div>
     </div>
