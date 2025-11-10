@@ -80,14 +80,14 @@
 
                     <!-- Submit button -->
                     <div class="md:col-span-3 lg:col-span-1 flex items-end justify-end">
-                        <button type="submit" 
-                                class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
-                            Apply Filters
-                        </button>
                         <a href="{{ route('events.index') }}" 
-                           class="ml-3 px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+                           class=" px-4 py-2 bg-red-700 text-white rounded-md hover:bg-red-800 transition">
                             Reset
                         </a>
+                        <button type="submit" 
+                                class="ml-3 px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition">
+                            Apply Filters
+                        </button>
                     </div>
                 </form>
             </div>

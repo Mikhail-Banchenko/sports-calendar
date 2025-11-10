@@ -4,7 +4,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <!-- If there is success message - show it -->
             @if (session('success'))
-                <div class="mb-4 p-4 bg-green-100 text-green-800 rounded-lg">
+                <div class="mb-4 p-4 bg-green-100 text-green-800 rounded-lg dark:bg-green-800 dark:text-gray-100">
                     {{ session('success') }}
                 </div>
             @endif
@@ -13,7 +13,7 @@
             <div class="flex justify-between mb-4">
                 <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Event List</h3>
                 <a href="{{ route('admin.events.create') }}"
-                   class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                   class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition">
                     + Add New Event
                 </a>
             </div>
@@ -45,7 +45,7 @@
                                 <td class="px-6 py-4">{{ $event->venue }}</td>
                                 <td class="px-6 py-4 flex space-x-2">
                                     <a href="{{ route('admin.events.edit', $event->id) }}"
-                                       class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded">
+                                       class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded transition">
                                         Edit
                                     </a>
                                     <form action="{{ route('admin.events.destroy', $event->id) }}" method="POST"
@@ -53,7 +53,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"
-                                                class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded">
+                                                class="bg-red-700 hover:bg-red-800 text-white px-3 py-1 rounded transition">
                                             Delete
                                         </button>
                                     </form>

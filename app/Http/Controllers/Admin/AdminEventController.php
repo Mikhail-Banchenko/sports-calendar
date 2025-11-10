@@ -42,6 +42,8 @@ class AdminEventController extends Controller
             '_sport_id' => 'required|integer',
             '_team_left_id' => 'required|integer',
             '_team_right_id' => 'required|integer',
+            'country' => 'string|max:255',
+            'city' => 'string|max:255',
             'venue' => 'string|max:255',
             'description' => 'string',
         ]);
@@ -73,6 +75,8 @@ class AdminEventController extends Controller
             '_sport_id' => 'required|integer',
             '_team_left_id' => 'required|integer',
             '_team_right_id' => 'required|integer',
+            'country' => 'string|max:255',
+            'city' => 'string|max:255',
             'venue' => 'string|max:255',
             'description' => 'string',
         ]);

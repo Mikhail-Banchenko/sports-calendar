@@ -10,7 +10,7 @@
                     <!-- If there are some errors show it -->
                     {{-- Validation Errors --}}
                     @if ($errors->any())
-                        <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-lg">
+                        <div class="mb-4 p-4 bg-red-100 text-red-700 rounded-lg dark:bg-red-800 dark:text-gray-100">
                             <ul class="list-disc list-inside">
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -92,6 +92,25 @@
                             </select>
                         </div>
 
+                        <!-- Country input -->
+                        <div class="mb-4">
+                            <label for="country" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
+                                {{ __('Country') }}
+                            </label>
+                            <input id="country" name="country" type="text" value="{{ old('country', $event->country) }}" placeholder="Write country here..."
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                       focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                        </div>
+
+                        <!-- City input -->
+                        <div class="mb-4">
+                            <label for="city" class="block font-medium text-sm text-gray-700 dark:text-gray-300">
+                                {{ __('City') }}
+                            </label>
+                            <input id="city" name="city" type="text" value="{{ old('city', $event->city) }}" placeholder="Write city here..."
+                                class="mt-1 block w-full border-gray-300 dark:border-gray-700 rounded-md shadow-sm bg-gray-700
+                                       focus:border-indigo-500 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                        </div>
 
                         <!-- Venue input -->
                         <div class="mb-4">
@@ -117,11 +136,11 @@
                         <!-- Buttons to cancel or submit creating -->
                         <div class="flex items-center justify-end space-x-4 mt-6">
                             <a href="{{ route('admin.events.index') }}"
-                               class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded">
+                               class="bg-red-700 hover:bg-red-800 text-gray-100 font-bold py-2 px-4 rounded transition">
                                 {{ __('Cancel') }}
                             </a>
                             <button type="submit"
-                                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition">
                                 {{ __('Update Event') }}
                             </button>
                         </div>
