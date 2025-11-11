@@ -12,6 +12,8 @@ class Event extends Model
         '_sport_id',
         '_team_left_id',
         '_team_right_id',
+        'country',
+        'city',
         'venue',
         'description',
     ];
