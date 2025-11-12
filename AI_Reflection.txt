@@ -1,0 +1,16 @@
+Introduction
+The goal of this project was to develop a fully functional web application, including database structure, logic, and front-end templates. I used AI tools as a supportive resource. AI assisted me in routine tasks or when I needed to learn something new, but all core design, logic, and testing were done independently.
+
+My contribution
+I was fully responsible for designing the project and implementing its core ideas. I personally created all migrations, seeder logic, routes, and controllers. I also wrote all the tests at the end of development. Throughout the process, I continuously reviewed and adjusted the code, testing each part to ensure everything worked as expected.
+
+AI contribution
+My use of AI can be divided into four areas:
+
+ 1. Filling repetitive code. For example in seeders where multiple entries needed to be created without any complex logic. It helps to save a lot of time.
+
+ 2. Creating the design foundation based on my code — AI provided the basic HTML views structure based on the existing design. I then refined and added details to ensure the layout matched my vision.
+
+ 3. Assistance with understanding and fixing errors — when I could not identify the cause of an error myself, AI explained the issue and suggested possible solutions, helping me learn how to resolve similar problems independently. I always ask to give an explanation and not just a solution.
+
+ 4. Using GitHub Copilot — to accelerate writing comments based on my code, which improved documentation and readability without replacing my logic. It saved a lot of time which I then spent on developing

@@ -135,7 +135,7 @@ The project uses MySQL as its main database engine, because i already worked wit
 
 Look at the commit history to see each step I took. If you want to look at AI's usage check [AI_Reflection.txt](AI_Reflection.txt).
 
-## Ideas for Future Development
+## Ideas for Future Development (if I had more time)
 
 Several features could be added in the future to improve both user experience and data presentation:
 
