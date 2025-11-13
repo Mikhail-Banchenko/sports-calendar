@@ -139,9 +139,8 @@ Look at the commit history to see each step I took. If you want to look at AI's 
 
 Several features could be added in the future to improve both user experience and data presentation:
 
-- **Implement placeholders** for navigation menu items that are currently not linked to any functionality.  
-- **Add team images** can be implemented by adding column (for example `logo_path`) in the `teams` table to store teams logos.  
-- **Implement `score` column to `events` table**, allowing old events to have recorded match results and enabling statistical analysis based on them (for example winrate).  
+- **Implement `_result_id` column to `events` table with `results` table**, allowing old events to have recorded match results and enabling statistical analysis based on them (for example winrate of team). 
+- **Add team images** can be implemented by adding column (for example `logo_path`) in the `teams` table to store teams logos.   
 - **Enhance the main user page** — instead of simple links, display summary information such as:
   - Upcoming events  
   - Recently finished events with results  
