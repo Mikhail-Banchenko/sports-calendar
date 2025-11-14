@@ -3,6 +3,17 @@
 A web application developed for participation in the **Sportradar Coding Academy 2026 (Backend)**.  
 The project is a sports event portal where users can explore upcoming and past sports events, filter them by various parameters, and view related information. It also includes an admin panel that allows administrators to manage event data directly through the interface.
 
+## Tech stack
+- PHP 8
+- Laravel 12
+- Laravel Breeze
+- MySQL
+- Blade Templates
+- TailwindCSS
+- Node.js 24 + Vite
+- PHPUnit
+- Composer / NPM
+
 ## How to set up locally
 
 Clone my repository to your folder: 
@@ -49,6 +60,10 @@ Run Frontend:
 ```bash
 npm run dev
 ```
+
+After running this commands, the application will be available at the URL shown in the console output.
+Usually: http://127.0.0.1:8000
+
 ### How to test app
 Some tests are included, such as checking if pages render correctly and verifying permissions for the admin panel (adding, editing, deleting events).  
 Run tests using:
