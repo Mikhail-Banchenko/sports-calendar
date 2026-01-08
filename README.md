@@ -1,7 +1,14 @@
 # Sports Calendar
 
-A web application developed for participation in the **Sportradar Coding Academy 2026 (Backend)**.  
-The project is a sports event portal where users can explore upcoming and past sports events, filter them by various parameters, and view related information. It also includes an admin panel that allows administrators to manage event data directly through the interface.
+A web application built as a portfolio project to demonstrate backend development skills using Laravel.  
+The application represents a sports event portal where users can browse upcoming and past sports events, filter them by various criteria, and view detailed information about each event.
+
+The project also includes an admin panel with authentication and role-based access, allowing administrators to manage sports events directly through the user interface (create, edit, and delete records). The focus of the project is on clean architecture, database design, and practical backend features commonly found in real-world applications.
+
+In addition to the application itself, this repository is intended to showcase my ability to document code and write clear technical documentation.  
+Along with the detailed project description in this README, the codebase contains concise, meaningful comments that explain key implementation decisions and improve overall readability and maintainability.
+
+
 
 ## Tech stack
 - PHP 8
@@ -116,12 +123,18 @@ Look at [this ERD](erd_of_only_my_tables.png) if you want to see only the models
 ## Assumptions and Decisions
 
 ### Technology stack decisions
-The project is built using Laravel (PHP framework) with Blade templates and Laravel Breeze for authentication.  
-I chose Laravel because of its clean syntax, tools that simplify backend development, and because I already had experience with it.  
 
-Laravel Breeze was used to avoid implementing authentication from scratch and to ensure a secure login and registration system.  
-Blade templates allowed me to combine layout and styling logic in one place, which simplified frontend development without introducing additional frameworks.  
-The project uses MySQL as its main database engine, because i already worked with it.
+- The project is built using **Laravel** as the main backend framework due to its strong ecosystem and suitability for building structured, maintainable web applications. Laravel provides a clear MVC architecture, expressive routing, built-in validation, and an ORM (Eloquent) that simplifies working with relational databases while keeping business logic readable and well-organized.
+
+- **Blade templates** were chosen for server-side rendering to keep the frontend tightly integrated with the backend logic. This approach allows fast development, predictable data flow, and avoids unnecessary complexity that would come with introducing a separate frontend framework for a project of this scope.
+
+- **Laravel Breeze** is used to handle authentication and basic user management. 
+
+- **TailwindCSS** is used for styling due to its utility-first approach, which enables consistent UI development without writing large amounts of custom CSS. It also integrates well with Blade templates and allows rapid iteration on layouts and themes.
+
+- For testing, **PHPUnit** is used to validate core application behavior, including page rendering and access control. This ensures that key functionality works as expected and that admin-only features are properly protected.
+
+- Dependency management is handled using **Composer** for PHP packages and **NPM** for frontend tooling, following standard practices in the Laravel ecosystem.
 
 ### Development decisions
 
@@ -148,22 +161,35 @@ The project uses MySQL as its main database engine, because i already worked wit
 5. **Design decision**  
    The project was originally developed for a dark theme interface. Later, support for light mode was added. The theme automatically adapts based on the user's browser or system appearance settings — to switch themes, simply change your browser’s theme.
 
-Look at the commit history to see each step I took. If you want to look at AI's usage check [AI_Reflection.txt](AI_Reflection.txt).
+## Potential Improvements and Future Enhancements
 
-## Ideas for Future Development (if I had more time)
+The following ideas outline possible directions for extending the project further.
 
-Several features could be added in the future to improve both user experience and data presentation:
+- **Event results and statistics system**  
+  Introduce a dedicated `results` table linked to events, allowing completed events to store match outcomes.  
+  This would enable statistical features such as team win/loss ratios, historical performance analysis, and sport-level summaries.
 
-- **Implement `_result_id` column to `events` table with `results` table**, allowing old events to have recorded match results and enabling statistical analysis based on them (for example winrate of team). 
-- **Add team images** can be implemented by adding column (for example `logo_path`) in the `teams` table to store teams logos.   
-- **Enhance the main user page** — instead of simple links, display summary information such as:
-  - Upcoming events  
-  - Recently finished events with results  
-  - Filters or quick access to popular sports
-- **Improve the admin dashboard** to show quick statistics, such as:
-  - Total number of sports, teams, players, and events  
-  - Win/loss percentages per team or sport  
-  - Quick actions (e.g., “Add new event”, “Manage users”)
-- **Implement pagination or lazy loading** for event listings when the database grows.  
-- **Add API endpoints** to make event and team data accessible to other services or frontends.  
-- **Localization support** — allowing the interface to be easily translated into multiple languages. 
+- **Media support for teams and events**  
+  Add support for team logos and event-related images by storing file paths (e.g. `logo_path`) and implementing a media upload pipeline.  
+  This would require handling file storage, validation, and access control.
+
+- **Admin dashboard analytics**  
+  Extend the admin panel with a dashboard that provides operational insights, including:
+  - total counts of sports, teams, players, and events,
+  - basic statistics per sport or team,
+  - shortcuts for common administrative actions.  
+  This would demonstrate data aggregation and backend-driven analytics.
+
+- **Pagination and performance optimization**  
+  Introduce pagination, lazy loading, or caching strategies for event listings to ensure consistent performance as the dataset grows.
+
+- **Public API layer**  
+  Expose selected data through RESTful API endpoints, making the system usable by external clients or alternative frontends.  
+  This would include API authentication, request validation, and versioning.
+
+- **Localization and internationalization**  
+  Add multi-language support using Laravel’s localization features, making the application adaptable for different regions and audiences.
+
+- **Role-based access expansion**  
+  Extend the current authorization system to support multiple user roles (e.g. editors, moderators) with fine-grained permissions, improving security and scalability.
+
